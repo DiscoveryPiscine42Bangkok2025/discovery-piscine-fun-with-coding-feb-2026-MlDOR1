@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculator</h1>
+
+    <div class="row">
+      <input type="text" id="left" placeholder="0">
+
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+
+      <input type="text" id="right" placeholder="0">
+    </div>
+
+    <input type="submit" id="submit" value="Try me!">
+  </div>
+
+  <script>
+    function isValidPositiveInteger(value) {
+      if (value === '') return false;
+      var n = Number(value);
+      return Number.isInteger(n) && n >= 0 && String(n) === value;
+    }
+
+    document.getElementById('submit').addEventListener('click', function () {
+      var leftVal = document.getElementById('left').value;
+      var rightVal = document.getElementById('right').value;
+      var operator = document.getElementById('operator').value;
+
+      if (!isValidPositiveInteger(leftVal) || !isValidPositiveInteger(rightVal)) {
+        alert('Error :(');
+        return;
+      }
+
+      var left = Number(leftVal);
+      var right = Number(rightVal);
+      var result;
+
+      if ((operator === '/' || operator === '%') && right === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      switch (operator) {
+        case '+': result = left + right; break;
+        case '-': result = left - right; break;
+        case '*': result = left * right; break;
+        case '/': result = left / right; break;
+        case '%': result = left % right; break;
+      }
+
+      alert(result);
+      console.log(result);
+    });
+
+    setInterval(function () {
+      alert('Please, use me...');
+    }, 30000);
+  </script>
+</body>
+</html>

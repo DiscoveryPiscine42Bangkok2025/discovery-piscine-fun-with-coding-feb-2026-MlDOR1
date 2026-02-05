@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Georgia, serif;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-1 {
+    background-image: url('https://i.kym-cdn.com/editorials/icons/mobile/000/013/069/guy-pointing-at-himself.jpg');
+}
+
+.parallax-2 {
+    background-image: url('https://scontent.fbkk24-1.fna.fbcdn.net/v/t39.30808-6/565121572_3120629498098303_3175369100395445833_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=bd9a62&_nc_ohc=ZSs8bfIfrGsQ7kNvwH2hrz3&_nc_oc=AdkWPt7rHYtlypuHUpY6qUwCA6N3MKLhc7UdBfhfrhZAxVwGBWtPC90Q8iEPx_2V-AY2wvR9MGxp9sMqA-NZUnGi&_nc_zt=23&_nc_ht=scontent.fbkk24-1.fna&_nc_gid=2qVbgSvwROeVruS_YWWxnw&oh=00_Afub6VvLQLZ-dOHmXVJvMcgd9lQFpFyirBtOKD0NThQDaQ&oe=698A264F');
+}
+
+.parallax .caption {
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.black-block {
+    background: #000;
+    color: #fff;
+    padding: 80px 40px;
+    text-align: center;
+    font-size: 1.2rem;
+}
